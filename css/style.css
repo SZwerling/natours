@@ -1,0 +1,160 @@
+/* #2193b0
+#6dd5ed */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* set root font-size so 1 rem equals 10px */
+/* We can then set media queries on the root and that changes everything else */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right top, rgba(33, 147, 176, 0.8), rgba(109, 213, 237, 0.8)), url("../img/20211121_160449.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 100% 67%, 0% 100%);
+}
+
+.header__logo-box {
+  opacity: 0;
+  position: absolute;
+  top: 5.5rem;
+  left: 4rem;
+  /* animation-name: flyInSlim;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-delay: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate; */
+  animation: flyInSlim 5s ease-out 4s 2 alternate;
+}
+
+.header__logo {
+  height: 15rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: whitesmoke;
+  text-transform: uppercase;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+}
+
+.heaindg-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2.2rem;
+}
+
+@keyframes flyInSlim {
+  0% {
+    opacity: 1;
+    transform: translateY(-80rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    color: #2193b0;
+  }
+  80% {
+    color: #00008B;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* pseudo classes
+transition property is on initial state */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: -0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #F5F5F5;
+  color: #777;
+}
+
+/* pseudo elements */
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--white::after {
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+.btn:hover::after {
+  transform: scaleX(3) scaleY(1.5);
+  opacity: 0;
+  /* so it grows and fades out */
+}
+
+/*# sourceMappingURL=style.css.map */
