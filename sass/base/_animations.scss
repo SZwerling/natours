@@ -1,0 +1,33 @@
+@keyframes flyInSlim {
+    0% {
+        opacity: 1;
+        transform: translateY(-80rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        color: #2193b0;
+    }
+
+    80% {
+        color: #00008B;
+    }
+
+    100% {
+        opacity: 1
+    }    
+}
+
+/* pseudo classes
+transition property is on initial state */
