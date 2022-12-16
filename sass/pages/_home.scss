@@ -2,4 +2,24 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(min-content, 1fr));
 }
+
+ .heading-secondary {
+    grid-column: 1 / -1;
+    justify-self: center;
+ }
+ .about-text {
+    grid-column: 1 / 7;
+    justify-self: center;
+    
+ }
+ .about-image-composition {
+    grid-column: 7 / 13;
+    justify-self: center;
+    background-color: lightgoldenrodyellow;
+    width: 100%;
+ }
+ 
