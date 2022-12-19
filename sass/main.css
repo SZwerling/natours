@@ -113,7 +113,7 @@ body {
 
 .heading-secondary {
   font-size: 3.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -164,17 +164,17 @@ body {
 }
 
 .about-text {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-column: 1 / 7;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2 / 7;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 .about-image-composition {
   -ms-grid-column: 7;
-  -ms-grid-column-span: 6;
-  grid-column: 7 / 13;
+  -ms-grid-column-span: 5;
+  grid-column: 7 / 12;
   -ms-grid-column-align: center;
       justify-self: center;
   width: 100%;
