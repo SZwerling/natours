@@ -1,9 +1,13 @@
 .features-container {
-    
+    margin: 0 12rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    justify-items: center;
+    grid-row-gap: 6rem;
 }
 
 .feature-box {
-    width: 22.8rem;
+    width: 25rem;
     background-color: rgba($color-white, .8);
     font-size: 1.5rem;
     padding: 2.5rem;
@@ -12,20 +16,25 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     align-items: center;
+    transition: all .2s;
 
     h3 {
-        margin-bottom: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
     &__icon {
-        fill: rgba($color-blue-grey, 1);
-        width: 4rem;
-        height: 4rem;
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-blue, $color-blue-grey);
+        -webkit-background-clip: text;
+        color: transparent;
     }
 
-    &__text {
-
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
     }
 
 }
