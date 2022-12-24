@@ -58,10 +58,10 @@
             background-image: linear-gradient(to right top, $color-green, $color-green-dark), url(../img/nat-5.jpg);
         }
         &--2 {
-            background-image: linear-gradient(to right top, $color-orange, $color-orange-light), url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right top, $color-orange, $color-orange-light), url(../img/nat-6.jpg);
         }
         &--3 {
-            background-image: linear-gradient(to right top, $color-blue, $color-blue-grey), url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right top, $color-blue, $color-blue-grey), url(../img/nat-7.jpg);
         }
     }
 
@@ -111,6 +111,32 @@
             }
         }
     }
+
+        //BACKSIDE STYLING
+        &__cta {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            text-align: center;
+        }
+
+        &__price-box {
+            text-align: center;
+            margin-bottom: 8rem;
+            color: $color-white;
+        }
+
+        &__price-only {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+            font-weight: 100;
+        }
 }
 // when .card is hovered, card__side rotates
 // $color-green: #43C59E;

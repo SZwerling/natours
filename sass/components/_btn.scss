@@ -3,6 +3,7 @@
 .btn {
     &:link,
     &:visited {
+        font-size: 1.6rem;
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
@@ -29,11 +30,20 @@
     }
     
     &--white {
-        background-color: #F5F5F5;
+        background-color: $color-primary;
         color: $color-text;
 
         &::after {
-            background-color: rgba(245, 245, 245, .5);
+            background-color: $color-primary;
+       }
+    }
+
+    &--blue {
+        background-color: $color-blue;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-blue;
        }
     }
     
