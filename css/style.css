@@ -158,6 +158,11 @@ body {
   gap: 5rem;
 }
 
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7;
+}
+
 .btn {
   /* pseudo elements */
 }
@@ -419,6 +424,32 @@ body {
   font-weight: 100;
 }
 
+.story {
+  width: 75%;
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+}
+.story > * {
+  transform: skewX(12deg);
+}
+.story__shape {
+  content: " ";
+  width: 15rem;
+  height: 15rem;
+  margin: 2rem 2rem 2rem 0;
+  float: left;
+  shape-outside: content-box circle(50% at 50% 50%);
+  shape-margin: 2rem;
+  clip-path: circle(50% at 50% 50%);
+}
+.story__img {
+  height: 100%;
+}
 .header {
   height: 95vh;
   background-image: linear-gradient(to right top, rgba(33, 147, 176, 0.8), rgba(109, 213, 237, 0.8)), url("../img/20211121_160449.jpg");
