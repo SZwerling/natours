@@ -62,7 +62,7 @@
 
  .section-stories {
    padding: 15rem 0;
-   background-color: $color-grey-light-1;
+   position: relative;
  }
 
  .section-stories-container {
@@ -71,6 +71,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   justify-content: center;
    gap: 7rem;
  }
  
