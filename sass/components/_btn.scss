@@ -1,6 +1,7 @@
 
 
 .btn {
+    &,
     &:link,
     &:visited {
         font-size: 1.6rem;
@@ -11,6 +12,10 @@
         border-radius: 10rem;
         transition: all .3s;
         position: relative;
+
+        //change for the button element
+        border: none;
+        cursor: pointer;
     }
     
     &:hover {
