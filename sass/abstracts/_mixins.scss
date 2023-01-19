@@ -1,0 +1,30 @@
+// MEDIA QUERY MANAGER
+// 0 - 600       cellphone
+// 600 - 900     tablet in portrat
+// 900 - 1200    tablen in landscape
+// 1200 - 1800   laptop/desktop -- where styles outside of mq's apply
+// 1800+         big desktop
+
+
+/* 
+breakpoint argument choices:
+phone
+tablet-portrait
+tablet-landscape
+big-desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content}; //600px / 16
+    }
+    @if $breakpoint == tablet-portrait {
+        @media (max-width: 56.25em) {@content}; //900px
+    }
+    @if $breakpoint == tablet-landscape {
+        @media (max-width: 75em) {@content}; //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media (max-width: 112.5em) {@content}; //1800px
+    }
+}
