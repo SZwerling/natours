@@ -58,6 +58,15 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 5rem;
+
+   @include respond(tablet-landscape){
+    gap: 1rem;
+   }
+
+   @include respond(tablet-portrait){
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
  }
 
  .section-stories {
