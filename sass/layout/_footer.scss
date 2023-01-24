@@ -4,6 +4,10 @@
    font-size: 1.4rem;
    display: flex;
    flex-direction: column;
+
+   @include respond(tablet-portrait){
+      padding: 8rem 0;
+   }
   
    gap: 7rem;
 
@@ -20,6 +24,14 @@
       display: grid;
       grid-template-columns: max-content 15rem minmax(min-content, 41rem);
       justify-content: center;
+
+      @include respond(tablet-landscape){
+         grid-template-columns: min-content 5rem minmax(min-content, 41rem);
+      }
+
+      @include respond(phone){
+         grid-template-rows: 1fr;
+      }
      
    }
 
@@ -28,6 +40,10 @@
       border-top: 1px solid $color-grey-light-1;
       padding-top: 2rem;
       display: inline-block;
+
+      @include respond(phone){
+           grid-column: 1 / -1;
+      }
    }
 
    &__list {
@@ -35,6 +51,10 @@
       display: flex;
       flex-direction: row;
       gap: 1.5rem;
+
+      @include respond(phone){
+         justify-content: space-evenly;
+    }
    }
 
    &__item {
@@ -64,5 +84,9 @@
       grid-column: 3 / 4;
       border-top: 1px solid $color-grey-light-1;
       padding-top: 2rem;
+
+      @include respond(phone){
+         grid-column: 1 / -1;
+    }
    }
 }
